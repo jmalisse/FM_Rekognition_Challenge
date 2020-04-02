@@ -1,0 +1,6 @@
+framework module Pods_FMACRekognitionChallenge {
+  umbrella header "Pods-FMACRekognitionChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
