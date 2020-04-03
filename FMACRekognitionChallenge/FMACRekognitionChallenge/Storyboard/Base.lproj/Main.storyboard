@@ -81,6 +81,9 @@
                                 <rect key="frame" x="153" y="712" width="107" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Compare Faces"/>
+                                <connections>
+                                    <action selector="submitCheck:" destination="auj-s4-6Zp" eventType="touchUpInside" id="UmQ-xQ-Xxa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udY-Q4-yWW">
                                 <rect key="frame" x="155" y="272" width="105" height="30"/>

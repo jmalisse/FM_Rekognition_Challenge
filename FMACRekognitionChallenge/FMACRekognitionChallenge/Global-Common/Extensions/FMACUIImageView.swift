@@ -11,12 +11,12 @@ import UIKit
 extension UIImageView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
 	public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-		guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
-			// handle error here
+		
+		guard let editedimage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+			// error handling
 			return
 		}
-		
-		image = selectedImage
+		image = editedimage
 		
 		picker.presentingViewController?.dismiss(animated: true, completion: nil)
 	}

@@ -18,6 +18,7 @@
 		290B9F9E24364F5700F5E4E6 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B9F9D24364F5700F5E4E6 /* Face.swift */; };
 		29989FCC2436D9200072CFBD /* FMACUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29989FCB2436D9200072CFBD /* FMACUIImageView.swift */; };
 		29989FCE2436DCCE0072CFBD /* FMACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29989FCD2436DCCE0072CFBD /* FMACViewController.swift */; };
+		29989FD024378BDB0072CFBD /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29989FCF24378BDB0072CFBD /* Celebrity.swift */; };
 		7A3C73F47779FB15EB84DC99 /* Pods_FMACRekognitionChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86FAE342EE2B90A0B1D01B3 /* Pods_FMACRekognitionChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		290B9F9D24364F5700F5E4E6 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		29989FCB2436D9200072CFBD /* FMACUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMACUIImageView.swift; sourceTree = "<group>"; };
 		29989FCD2436DCCE0072CFBD /* FMACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMACViewController.swift; sourceTree = "<group>"; };
+		29989FCF24378BDB0072CFBD /* Celebrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
 		4A4AACF15A07BFC662E45B5A /* Pods-FMACRekognitionChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMACRekognitionChallenge.debug.xcconfig"; path = "Target Support Files/Pods-FMACRekognitionChallenge/Pods-FMACRekognitionChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		B86FAE342EE2B90A0B1D01B3 /* Pods_FMACRekognitionChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FMACRekognitionChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88A7CFCDF102CB9C798A019 /* Pods-FMACRekognitionChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMACRekognitionChallenge.release.xcconfig"; path = "Target Support Files/Pods-FMACRekognitionChallenge/Pods-FMACRekognitionChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				290B9F9D24364F5700F5E4E6 /* Face.swift */,
+				29989FCF24378BDB0072CFBD /* Celebrity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				29989FCE2436DCCE0072CFBD /* FMACViewController.swift in Sources */,
 				290B9F6E24350C7200F5E4E6 /* ViewController.swift in Sources */,
 				29989FCC2436D9200072CFBD /* FMACUIImageView.swift in Sources */,
+				29989FD024378BDB0072CFBD /* Celebrity.swift in Sources */,
 				290B9F9C24364BAB00F5E4E6 /* FMACImageSelectionViewController.swift in Sources */,
 				290B9F6A24350C7200F5E4E6 /* AppDelegate.swift in Sources */,
 				290B9F982436487D00F5E4E6 /* FMACColors.swift in Sources */,
