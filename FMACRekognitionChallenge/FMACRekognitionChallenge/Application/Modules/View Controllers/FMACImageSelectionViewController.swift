@@ -8,8 +8,7 @@
 
 import UIKit
 import AWSRekognition
-import SafariServices
-import Photos
+import os.log
 
 class FMACImageSelectionViewController: FMACViewController, UIImagePickerControllerDelegate {
 	
@@ -69,6 +68,7 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 			// Error will contain information about the failure, but the information comes as String(s) and can't be parsed this way, afaict. Preferably, it would be best to parse the error code and present an alert based on that.
 			if error != nil {
 				// Error here, present alert on main thread (UI elements always on main thread)
+//				os_log(StaticString(error.debugDescription))
 				DispatchQueue.main.async {
 					let errorAlert = UIAlertController(title: "Invalid Photo(s)", message: "Please select photos of faces and make sure both Source and Target photos are chosen.", preferredStyle: .alert)
 					let closeButton = UIAlertAction(title: "Close", style: .default, handler: nil)
@@ -84,9 +84,18 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 			//	First result is faceMatches which implies a match was found
 			//	Second result is unmatchedFaces which implies no match was found
 			
+			// Face matched here
 			if (result?.faceMatches!.count)! > 0 {
-				// Face has been matched here
-				print("face match detected with similarity value of \(result?.faceMatches![0].similarity)")
+				// Convert NSNumber to float value
+				let similarity: Float = result?.faceMatches![0].similarity as! Float
+				
+				// Set up Dispatch Queue on main thread for GUI elements
+				DispatchQueue.main.async {
+					let successAlert = UIAlertController(title: "Match Detected!", message: "Facial similary for these photos determined to be: \(similarity)%", preferredStyle: .alert)
+					let closeButton = UIAlertAction(title: "Close", style: .default, handler: nil)
+					successAlert.addAction(closeButton)
+					self.present(successAlert, animated: true, completion: nil)
+				}
 			}
 			else if (result?.unmatchedFaces!.count)! > 0 {
 				// No match found
