@@ -87,7 +87,7 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 			// Face matched here
 			if (result?.faceMatches!.count)! > 0 {
 				// Convert NSNumber to float value
-				let similarity: Float = result?.faceMatches![0].similarity as! Float
+				let similarity: Float = result?.faceMatches!.first!.similarity as! Float
 				
 				// Set up Dispatch Queue on main thread for GUI elements
 				DispatchQueue.main.async {
@@ -97,9 +97,16 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 					self.present(successAlert, animated: true, completion: nil)
 				}
 			}
+			// Photos successfully processed but no face match detected for the given parameters (similarity or actual match)
 			else if (result?.unmatchedFaces!.count)! > 0 {
-				// No match found
-				print("no face match detected from this photo")
+
+				// Set up Dispatch Queue on main thread for GUI elements
+				DispatchQueue.main.async {
+					let failureAlert = UIAlertController(title: "Match Not Detected", message: "Facial similary not detected or not at high enough accuracy.", preferredStyle: .alert)
+					let closeButton = UIAlertAction(title: "Close", style: .default, handler: nil)
+					failureAlert.addAction(closeButton)
+					self.present(failureAlert, animated: true, completion: nil)
+				}
 			}
 		}
 	}
