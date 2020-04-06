@@ -68,7 +68,13 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 			
 			// Error will contain information about the failure, but the information comes as String(s) and can't be parsed this way, afaict. Preferably, it would be best to parse the error code and present an alert based on that.
 			if error != nil {
-				// Error here
+				// Error here, present alert on main thread (UI elements always on main thread)
+				DispatchQueue.main.async {
+					let errorAlert = UIAlertController(title: "Invalid Photo(s)", message: "Please select photos of faces and make sure both Source and Target photos are chosen.", preferredStyle: .alert)
+					let closeButton = UIAlertAction(title: "Close", style: .default, handler: nil)
+					errorAlert.addAction(closeButton)
+					self.present(errorAlert, animated: true, completion: nil)
+				}
 				
 				// Return the request/response API function
 				return
