@@ -102,7 +102,7 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 
 				// Set up Dispatch Queue on main thread for GUI elements
 				DispatchQueue.main.async {
-					let failureAlert = UIAlertController(title: "Match Not Detected", message: "Facial similary not detected or not at high enough accuracy.", preferredStyle: .alert)
+					let failureAlert = UIAlertController(title: "Match Not Detected", message: "Facial similarity not detected or not at high enough accuracy.", preferredStyle: .alert)
 					let closeButton = UIAlertAction(title: "Close", style: .default, handler: nil)
 					failureAlert.addAction(closeButton)
 					self.present(failureAlert, animated: true, completion: nil)

@@ -8,14 +8,24 @@
 
 import UIKit
 
-class FMACViewController: ViewController {
+@IBDesignable class FMACViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		self.view.backgroundColor = UIColor.fmac_green
         // Do any additional setup after loading the view.
     }
     
+	override func prepareForInterfaceBuilder() {
+		super.prepareForInterfaceBuilder()
+	}
+	
+	@IBInspectable var backgroundColor: UIColor = UIColor.clear {
+		didSet {
+			self.view.backgroundColor = backgroundColor
+		}
+	}
 
     /*
     // MARK: - Navigation
