@@ -10,11 +10,11 @@ import UIKit
 import AWSRekognition
 import os.log
 
-class FMACImageSelectionViewController: FMACViewController, UIImagePickerControllerDelegate {
+class FMACImageSelectionViewController: FMACViewController, UIImagePickerControllerDelegate, UIGestureRecognizerDelegate {
 	
 	// Outlet objects for images
-	@IBOutlet weak var imageSource: UIImageView!
-	@IBOutlet weak var imageTarget: UIImageView!
+	@IBOutlet weak var imageSource: FMACUIImageView!
+	@IBOutlet weak var imageTarget: FMACUIImageView!
 	
 	// Rekognition object
 	// Loads configuration from default (globally set in App Delegate)
@@ -24,6 +24,17 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 		super.viewDidLoad()
 		
 		// Do any additional setup after loading the view.
+		
+		// Set up tap gestures using obj-C reference to tappedImage
+		// Could be a way to remove the repitition from this code block...
+		let imageSourceTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedImageSource(sender:)))
+		imageSourceTapRecognizer.delegate = self
+		let imageTargetTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedImageTarget(sender:)))
+		imageTargetTapRecognizer.delegate = self
+		self.imageSource.addGestureRecognizer(imageSourceTapRecognizer)
+		self.imageSource.isUserInteractionEnabled = true
+		self.imageTarget.addGestureRecognizer(imageTargetTapRecognizer)
+		self.imageTarget.isUserInteractionEnabled = true
 	}
 	
 	// MARK: IBActions for buttons
@@ -35,6 +46,15 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 	
 	// Set target image
 	@IBAction func targetImageSelection(_ sender: UIButton) {
+		imageTarget.presentImagePicker(from: self)
+	}
+	
+	// Selector function - regardless of which image is tapped, they both handle their own imagePicker
+	// Buttons are still left for user convenience
+	@objc func tappedImageSource(sender: UIImageView) {
+		imageSource.presentImagePicker(from: self)
+	}
+	@objc func tappedImageTarget(sender: UIImageView) {
 		imageTarget.presentImagePicker(from: self)
 	}
 	
