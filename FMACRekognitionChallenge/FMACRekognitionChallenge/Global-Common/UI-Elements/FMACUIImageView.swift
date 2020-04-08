@@ -2,13 +2,35 @@
 //  FMACUIImageView.swift
 //  FMACRekognitionChallenge
 //
-//  Created by Jeremy Malisse on 4/2/20.
+//  Created by Jeremy Malisse on 4/8/20.
 //  Copyright © 2020 Jeremy Malisse. All rights reserved.
 //
 
 import UIKit
 
-extension UIImageView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+@IBDesignable class FMACUIImageView: UIImageView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	
+	override func prepareForInterfaceBuilder() {
+		super.prepareForInterfaceBuilder()
+	}
+	
+	@IBInspectable var cornerRadius: CGFloat = 0 {
+		didSet {
+			self.layer.cornerRadius = cornerRadius
+		}
+	}
+	
+	@IBInspectable var borderWidth: CGFloat = 0 {
+		didSet {
+			self.layer.borderWidth = borderWidth
+		}
+	}
+	
+	@IBInspectable var borderColor: UIColor = UIColor.fmac_blue {
+		didSet {
+			self.layer.borderColor = borderColor.cgColor
+		}
+	}
 	
 	public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		
@@ -16,6 +38,7 @@ extension UIImageView: UIImagePickerControllerDelegate, UINavigationControllerDe
 			// error handling
 			return
 		}
+
 		image = editedimage
 		
 		picker.presentingViewController?.dismiss(animated: true, completion: nil)
