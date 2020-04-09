@@ -60,6 +60,9 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 	
 	// Submit request to API
 	@IBAction func submitCheck(_ sender: UIButton) {
+		// Log the timestamp of submission request
+		
+		// Run comparison check
 		compare(sourceImage: imageSource.image!, targetImage: imageTarget.image!)
 	}
 	
@@ -90,13 +93,15 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 				// Error here, present alert on main thread (UI elements always on main thread)
 //				os_log(StaticString(error.debugDescription))
 				DispatchQueue.main.async {
-					let errorAlert = UIAlertController(title: "Invalid Photo(s)", message: "Please select photos of faces and make sure both Source and Target photos are chosen.", preferredStyle: .alert)
+					let errorAlert = UIAlertController(title: "Invalid Photo(s)", message: "An error has occurred. Please check the following.\n1) Both the Source and Target images are selected.\n2) Both images contain faces.\n3) There is sufficient detail in each image (not too dark, not too bright, etc)\n\nPlease resolve any of those issues with your selection and try again.", preferredStyle: .alert)
 					let closeButton = UIAlertAction(title: "Close", style: .default, handler: nil)
 					errorAlert.addAction(closeButton)
 					self.present(errorAlert, animated: true, completion: nil)
 				}
 				
 				// Return the request/response API function
+				
+				// Log the error and description with the timestamp.
 				return
 			}
 			
@@ -116,6 +121,8 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 					successAlert.addAction(closeButton)
 					self.present(successAlert, animated: true, completion: nil)
 				}
+				
+				// Log the successful match and similarity score along with timestamp
 			}
 			// Photos successfully processed but no face match detected for the given parameters (similarity or actual match)
 			else if (result?.unmatchedFaces!.count)! > 0 {
@@ -127,10 +134,9 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 					failureAlert.addAction(closeButton)
 					self.present(failureAlert, animated: true, completion: nil)
 				}
+				
+				// Log the unsuccessful match and the timestamp
 			}
 		}
 	}
 }
-
-
-
