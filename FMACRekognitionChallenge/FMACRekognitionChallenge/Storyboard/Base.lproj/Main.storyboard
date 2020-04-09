@@ -154,8 +154,8 @@
                                     <action selector="sourceImageSelection:" destination="auj-s4-6Zp" eventType="touchUpInside" id="OUv-p0-8Es"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cmd-zz-l7H" customClass="FMACUIImageView" customModule="FMACRekognitionChallenge" customModuleProvider="target">
-                                <rect key="frame" x="79" y="405" width="256" height="255.5"/>
+                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cmd-zz-l7H" customClass="FMACUIImageView" customModule="FMACRekognitionChallenge" customModuleProvider="target">
+                                <rect key="frame" x="79" y="403.5" width="256" height="259"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.27058823529999998" green="0.68627450980000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="targetImageSelector"/>
@@ -175,8 +175,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.square" catalog="system" highlightedImage="square.and.arrow.up.fill" translatesAutoresizingMaskIntoConstraints="NO" id="MFJ-J1-zx9" customClass="FMACUIImageView" customModule="FMACRekognitionChallenge" customModuleProvider="target">
-                                <rect key="frame" x="79" y="96" width="256" height="255.5"/>
+                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.on.rectangle" catalog="system" highlightedImage="square.and.arrow.up.fill" translatesAutoresizingMaskIntoConstraints="NO" id="MFJ-J1-zx9" customClass="FMACUIImageView" customModule="FMACRekognitionChallenge" customModuleProvider="target">
+                                <rect key="frame" x="79" y="94.5" width="256" height="259"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.27058823529999998" green="0.68627450980000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="sourceImageSelector"/>
@@ -224,7 +224,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.46666666670000001" green="0.75294117650000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="C4C-Ur-0w9" firstAttribute="bottom" secondItem="E3y-Vf-eYW" secondAttribute="bottom" constant="65" id="Dh1-Sd-HEr"/>
                             <constraint firstItem="E3y-Vf-eYW" firstAttribute="centerX" secondItem="C4C-Ur-0w9" secondAttribute="centerX" id="HOf-sj-fBN"/>
@@ -250,7 +250,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.crop.square" catalog="system" width="128" height="114"/>
+        <image name="camera.on.rectangle" catalog="system" width="128" height="96"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
     </resources>
 </document>
