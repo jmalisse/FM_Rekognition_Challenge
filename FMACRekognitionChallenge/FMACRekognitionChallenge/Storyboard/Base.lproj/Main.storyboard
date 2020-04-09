@@ -15,21 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FMAC Face Compare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cba-U7-Wjf">
-                                <rect key="frame" x="126" y="127" width="162" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-fW-Pph" customClass="FMACUIButton" customModule="FMACRekognitionChallenge" customModuleProvider="target">
-                                <rect key="frame" x="139" y="708" width="136" height="30"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-fW-Pph" customClass="FMACUIButton" customModule="FMACRekognitionChallenge" customModuleProvider="target">
+                                <rect key="frame" x="134.5" y="706" width="145" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="136" id="8Y2-ql-3vd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="8Y2-ql-3vd"/>
                                     <constraint firstAttribute="width" secondItem="gIu-fW-Pph" secondAttribute="height" multiplier="68:15" id="kGE-yi-ffm"/>
                                 </constraints>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -39,27 +33,60 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.27058823529999998" green="0.68627450980000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                        <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" red="0.27058823529999998" green="0.68627450980000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="auj-s4-6Zp" kind="presentation" modalPresentationStyle="fullScreen" id="yKd-46-N3Z"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vil-Yn-R4E">
+                                <rect key="frame" x="-2" y="338" width="237" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Blue (not installed - debug button)"/>
+                                <connections>
+                                    <action selector="blueColorBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCt-Ya-Dmg"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E01-f5-6bt">
+                                <rect key="frame" x="141" y="338" width="248" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Green (not installed - debug button)"/>
+                                <connections>
+                                    <action selector="greenColorBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i3E-g6-jhE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FMAC Face Compare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cba-U7-Wjf">
+                                <rect key="frame" x="116" y="131" width="182" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.46666666670000001" green="0.75294117650000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cba-U7-Wjf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="2HM-vU-8yL"/>
                             <constraint firstItem="gIu-fW-Pph" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JbZ-Eg-5RR"/>
+                            <constraint firstItem="cba-U7-Wjf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OCZ-Dy-EBG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gIu-fW-Pph" secondAttribute="bottom" constant="124" id="ylx-zH-CdM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vil-Yn-R4E"/>
+                                <exclude reference="E01-f5-6bt"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="continueButton" destination="gIu-fW-Pph" id="aqo-Fl-d8K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,20 +100,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udY-Q4-yWW" customClass="FMACUIButton" customModule="FMACRekognitionChallenge" customModuleProvider="target">
-                                <rect key="frame" x="144" y="320" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Choose Source"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3y-Vf-eYW" customClass="FMACUIButton" customModule="FMACRekognitionChallenge" customModuleProvider="target">
+                                <rect key="frame" x="129.5" y="765" width="155" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="NfT-1f-3Yb"/>
+                                    <constraint firstAttribute="width" secondItem="E3y-Vf-eYW" secondAttribute="height" multiplier="29:6" id="VA7-a7-Vii"/>
+                                </constraints>
+                                <state key="normal" title="Compare Faces">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.27058823529999998" green="0.68627450980000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundColor">
+                                        <color key="value" red="0.27058823529999998" green="0.68627450980000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitCheck:" destination="auj-s4-6Zp" eventType="touchUpInside" id="UmQ-xQ-Xxa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udY-Q4-yWW" customClass="FMACSubUIButton" customModule="FMACRekognitionChallenge" customModuleProvider="target">
+                                <rect key="frame" x="117.5" y="361" width="179" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="udY-Q4-yWW" secondAttribute="height" multiplier="28:5" id="IJW-IL-vXA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="zwI-e9-rE8"/>
+                                </constraints>
+                                <state key="normal" title="Choose Source">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sourceImageSelection:" destination="auj-s4-6Zp" eventType="touchUpInside" id="OUv-p0-8Es"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cmd-zz-l7H" customClass="FMACUIImageView" customModule="FMACRekognitionChallenge" customModuleProvider="target">
-                                <rect key="frame" x="79" y="363.5" width="256" height="256"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cmd-zz-l7H" customClass="FMACUIImageView" customModule="FMACRekognitionChallenge" customModuleProvider="target">
+                                <rect key="frame" x="79" y="405" width="256" height="255.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.27058823529999998" green="0.68627450980000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="targetImageSelector"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cmd-zz-l7H" secondAttribute="height" multiplier="128:129" id="YEK-cE-l46"/>
+                                    <constraint firstAttribute="width" constant="256" id="d75-6n-2dt"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -99,12 +175,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.square" catalog="system" highlightedImage="square.and.arrow.up.fill" translatesAutoresizingMaskIntoConstraints="NO" id="MFJ-J1-zx9" customClass="FMACUIImageView" customModule="FMACRekognitionChallenge" customModuleProvider="target">
-                                <rect key="frame" x="79" y="55" width="256" height="256"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.square" catalog="system" highlightedImage="square.and.arrow.up.fill" translatesAutoresizingMaskIntoConstraints="NO" id="MFJ-J1-zx9" customClass="FMACUIImageView" customModule="FMACRekognitionChallenge" customModuleProvider="target">
+                                <rect key="frame" x="79" y="96" width="256" height="255.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.27058823529999998" green="0.68627450980000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="sourceImageSelector"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MFJ-J1-zx9" secondAttribute="height" multiplier="128:129" id="m9Q-X0-iyB"/>
+                                    <constraint firstAttribute="width" constant="256" id="nUf-F6-J56"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -117,24 +196,47 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ft-kM-8e1" customClass="FMACUIButton" customModule="FMACRekognitionChallenge" customModuleProvider="target">
-                                <rect key="frame" x="146" y="629" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Choose Target"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ft-kM-8e1" customClass="FMACSubUIButton" customModule="FMACRekognitionChallenge" customModuleProvider="target">
+                                <rect key="frame" x="126.5" y="670" width="161" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="45V-Kc-VDi"/>
+                                    <constraint firstAttribute="width" secondItem="9ft-kM-8e1" secondAttribute="height" multiplier="151:30" id="O1z-7J-pHL"/>
+                                </constraints>
+                                <state key="normal" title="Choose Target">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="targetImageSelection:" destination="auj-s4-6Zp" eventType="touchUpInside" id="vNo-jH-1QC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3y-Vf-eYW" customClass="FMACUIButton" customModule="FMACRekognitionChallenge" customModuleProvider="target">
-                                <rect key="frame" x="135" y="767" width="145" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Compare Faces"/>
-                                <connections>
-                                    <action selector="submitCheck:" destination="auj-s4-6Zp" eventType="touchUpInside" id="UmQ-xQ-Xxa"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="C4C-Ur-0w9" firstAttribute="bottom" secondItem="E3y-Vf-eYW" secondAttribute="bottom" constant="65" id="Dh1-Sd-HEr"/>
+                            <constraint firstItem="E3y-Vf-eYW" firstAttribute="centerX" secondItem="C4C-Ur-0w9" secondAttribute="centerX" id="HOf-sj-fBN"/>
+                            <constraint firstItem="udY-Q4-yWW" firstAttribute="centerX" secondItem="MFJ-J1-zx9" secondAttribute="centerX" id="PKo-3N-zqZ"/>
+                            <constraint firstItem="cmd-zz-l7H" firstAttribute="centerX" secondItem="C4C-Ur-0w9" secondAttribute="centerX" id="c4l-K3-LDt"/>
+                            <constraint firstItem="MFJ-J1-zx9" firstAttribute="centerX" secondItem="C4C-Ur-0w9" secondAttribute="centerX" id="gh5-Rf-pyV"/>
+                            <constraint firstItem="9ft-kM-8e1" firstAttribute="top" secondItem="cmd-zz-l7H" secondAttribute="bottom" constant="8" id="jb6-gB-DZg"/>
+                            <constraint firstItem="MFJ-J1-zx9" firstAttribute="top" secondItem="C4C-Ur-0w9" secondAttribute="top" constant="51" id="lMj-cc-Gpl"/>
+                            <constraint firstItem="9ft-kM-8e1" firstAttribute="centerX" secondItem="cmd-zz-l7H" secondAttribute="centerX" id="qQk-qu-4mJ"/>
+                            <constraint firstItem="udY-Q4-yWW" firstAttribute="top" secondItem="MFJ-J1-zx9" secondAttribute="bottom" constant="8" id="vgx-ya-Pko"/>
+                            <constraint firstItem="cmd-zz-l7H" firstAttribute="top" secondItem="C4C-Ur-0w9" secondAttribute="top" constant="360" id="w4D-uB-gHx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C4C-Ur-0w9"/>
                     </view>
                     <connections>
