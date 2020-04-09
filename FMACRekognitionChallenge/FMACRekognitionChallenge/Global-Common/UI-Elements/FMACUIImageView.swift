@@ -36,11 +36,14 @@ import UIKit
 		
 		guard let editedimage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
 			// error handling
+			
+			// Log failed selection and timestamp
 			return
 		}
 
 		image = editedimage
 		
+		// Log successful selection and timestamp, then dismiss picker
 		picker.presentingViewController?.dismiss(animated: true, completion: nil)
 	}
 	
