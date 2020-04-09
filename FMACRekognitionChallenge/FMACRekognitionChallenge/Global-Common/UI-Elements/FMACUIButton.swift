@@ -9,10 +9,10 @@
 import UIKit
 
 @IBDesignable class FMACUIButton: UIButton {
-
+	
 	override func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
-		self.setTitleColor(UIColor.fmac_blue, for: .normal)
+		self.setTitleColor(UIColor.white, for: .normal)
 		titleLabel?.font = UIFont(name: "Helvetica", size: 17)
 	}
 	
@@ -53,6 +53,13 @@ import UIKit
 	@IBInspectable var buttonBackgroundColor: UIColor = UIColor.clear {
 		didSet {
 			backgroundColor = buttonBackgroundColor
+		}
+	}
+	
+	override open var isHighlighted: Bool {
+		didSet {
+			backgroundColor = isHighlighted ? UIColor.white : UIColor.fmac_blue
+			titleColor = isHighlighted ? UIColor.fmac_blue : UIColor.white
 		}
 	}
 }

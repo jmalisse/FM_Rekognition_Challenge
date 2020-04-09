@@ -16,6 +16,7 @@
 		290B9F982436487D00F5E4E6 /* FMACColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B9F972436487D00F5E4E6 /* FMACColors.swift */; };
 		290B9F9C24364BAB00F5E4E6 /* FMACImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B9F9B24364BAB00F5E4E6 /* FMACImageSelectionViewController.swift */; };
 		29970927243E46000089115F /* FMACUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29970926243E46000089115F /* FMACUIImageView.swift */; };
+		29970929243F82490089115F /* FMACSubUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29970928243F82490089115F /* FMACSubUIButton.swift */; };
 		29989FCE2436DCCE0072CFBD /* FMACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29989FCD2436DCCE0072CFBD /* FMACViewController.swift */; };
 		29989FD4243CE6F00072CFBD /* FMACUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29989FD3243CE6F00072CFBD /* FMACUIButton.swift */; };
 		7A3C73F47779FB15EB84DC99 /* Pods_FMACRekognitionChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86FAE342EE2B90A0B1D01B3 /* Pods_FMACRekognitionChallenge.framework */; };
@@ -33,6 +34,7 @@
 		290B9F972436487D00F5E4E6 /* FMACColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMACColors.swift; sourceTree = "<group>"; };
 		290B9F9B24364BAB00F5E4E6 /* FMACImageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMACImageSelectionViewController.swift; sourceTree = "<group>"; };
 		29970926243E46000089115F /* FMACUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMACUIImageView.swift; sourceTree = "<group>"; };
+		29970928243F82490089115F /* FMACSubUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMACSubUIButton.swift; sourceTree = "<group>"; };
 		29989FCD2436DCCE0072CFBD /* FMACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMACViewController.swift; sourceTree = "<group>"; };
 		29989FD3243CE6F00072CFBD /* FMACUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMACUIButton.swift; sourceTree = "<group>"; };
 		4A4AACF15A07BFC662E45B5A /* Pods-FMACRekognitionChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMACRekognitionChallenge.debug.xcconfig"; path = "Target Support Files/Pods-FMACRekognitionChallenge/Pods-FMACRekognitionChallenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				29989FD3243CE6F00072CFBD /* FMACUIButton.swift */,
 				29970926243E46000089115F /* FMACUIImageView.swift */,
+				29970928243F82490089115F /* FMACSubUIButton.swift */,
 			);
 			path = "UI-Elements";
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				29970927243E46000089115F /* FMACUIImageView.swift in Sources */,
 				29989FD4243CE6F00072CFBD /* FMACUIButton.swift in Sources */,
 				290B9F6C24350C7200F5E4E6 /* SceneDelegate.swift in Sources */,
+				29970929243F82490089115F /* FMACSubUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
