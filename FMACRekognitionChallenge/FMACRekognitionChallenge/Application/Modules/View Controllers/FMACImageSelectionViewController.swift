@@ -61,6 +61,7 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 	// Submit request to API
 	@IBAction func submitCheck(_ sender: UIButton) {
 		// Log the timestamp of submission request
+		os_log("Compare Faces Request initialized.", log: OSLog.default, type: .info)
 		
 		// Run comparison check
 		compare(sourceImage: imageSource.image!, targetImage: imageTarget.image!)
@@ -91,7 +92,8 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 			// Error will contain information about the failure, but the information comes as String(s) and can't be parsed this way, afaict. Preferably, it would be best to parse the error code and present an alert based on that.
 			if error != nil {
 				// Error here, present alert on main thread (UI elements always on main thread)
-//				os_log(StaticString(error.debugDescription))
+				os_log("Invalid photo selection made by User.", log: OSLog.default, type: .info)
+				
 				DispatchQueue.main.async {
 					let errorAlert = UIAlertController(title: "Invalid Photo(s)", message: "An error has occurred. Please check the following.\n1) Both the Source and Target images are selected.\n2) Both images contain faces.\n3) There is sufficient detail in each image (not too dark, not too bright, etc)\n\nPlease resolve any of those issues with your selection and try again.", preferredStyle: .alert)
 					let closeButton = UIAlertAction(title: "Close", style: .default, handler: nil)
@@ -100,8 +102,6 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 				}
 				
 				// Return the request/response API function
-				
-				// Log the error and description with the timestamp.
 				return
 			}
 			
@@ -123,6 +123,7 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 				}
 				
 				// Log the successful match and similarity score along with timestamp
+				os_log("Successful match found. Similarity recorded: %f", log: OSLog.default, type: .info, similarity)
 			}
 			// Photos successfully processed but no face match detected for the given parameters (similarity or actual match)
 			else if (result?.unmatchedFaces!.count)! > 0 {
@@ -136,6 +137,7 @@ class FMACImageSelectionViewController: FMACViewController, UIImagePickerControl
 				}
 				
 				// Log the unsuccessful match and the timestamp
+				os_log("No match found with given photos.", log: OSLog.default, type: .info)
 			}
 		}
 	}

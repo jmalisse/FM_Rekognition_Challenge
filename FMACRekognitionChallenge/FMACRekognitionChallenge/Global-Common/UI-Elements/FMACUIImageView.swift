@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 @IBDesignable class FMACUIImageView: UIImageView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
@@ -38,12 +39,14 @@ import UIKit
 			// error handling
 			
 			// Log failed selection and timestamp
+			os_log("Error occurred during photo selection.", log: OSLog.default, type: .info)
 			return
 		}
 
 		image = editedimage
 		
 		// Log successful selection and timestamp, then dismiss picker
+		os_log("Photo selection successfully completed.", log: OSLog.default, type: .info)
 		picker.presentingViewController?.dismiss(animated: true, completion: nil)
 	}
 	
