@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YN-wI-Qv3">
-                                <rect key="frame" x="155.5" y="174" width="103" height="19"/>
+                                <rect key="frame" x="156" y="277" width="103" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0YN-wI-Qv3" secondAttribute="height" multiplier="103:19" id="skC-fn-Qhq"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="xBA-C3-xg6"/>
@@ -79,7 +79,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the button below to begin." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23b-YM-Mq4">
-                                <rect key="frame" x="65.5" y="212" width="283" height="27"/>
+                                <rect key="frame" x="66" y="315" width="283" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="283" id="8Nw-VT-PAI"/>
                                     <constraint firstAttribute="width" secondItem="23b-YM-Mq4" secondAttribute="height" multiplier="283:27" id="RSZ-Cy-icU"/>
@@ -89,7 +89,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the Choose button or Click the image box to select an image for both the Source and Target images." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aml-ch-u0A">
-                                <rect key="frame" x="95" y="247" width="226" height="96"/>
+                                <rect key="frame" x="96" y="350" width="226" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aml-ch-u0A" secondAttribute="height" multiplier="120:37" constant="-85.351351351351354" id="EDS-0k-Zsf"/>
                                     <constraint firstAttribute="width" constant="226" id="fuT-fT-Q9t"/>
@@ -99,7 +99,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Pictures should have faces.)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNa-np-Oz0">
-                                <rect key="frame" x="93" y="350.5" width="230" height="30"/>
+                                <rect key="frame" x="94" y="453" width="230" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pNa-np-Oz0" secondAttribute="height" multiplier="23:3" id="Gef-BU-F8L"/>
                                     <constraint firstAttribute="width" constant="230" id="itm-Ym-2EY"/>
@@ -109,7 +109,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finally, press Submit." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvP-x4-3LD">
-                                <rect key="frame" x="116.5" y="397.5" width="181" height="29"/>
+                                <rect key="frame" x="117" y="500" width="181" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YvP-x4-3LD" secondAttribute="height" multiplier="181:29" id="GaC-7s-ubJ"/>
                                     <constraint firstAttribute="width" constant="181" id="lmT-bq-btj"/>
@@ -129,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The similarity between the two images will be output as a percentage and shown on screen." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GH1-W1-DtI">
-                                <rect key="frame" x="65.5" y="450" width="283" height="66"/>
+                                <rect key="frame" x="66" y="553" width="283" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GH1-W1-DtI" secondAttribute="height" multiplier="283:66" id="5WL-3r-Dee"/>
                                     <constraint firstAttribute="width" constant="283" id="q2N-Lf-Vo5"/>
@@ -145,7 +145,7 @@
                                 <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app uses photos selected from your media library to run face comparison matches on them." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFY-DJ-h7a">
-                                <rect key="frame" x="81" y="535" width="236" height="83"/>
+                                <rect key="frame" x="88" y="167" width="236" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="236" id="Tv3-aw-GH0"/>
                                     <constraint firstAttribute="width" secondItem="zFY-DJ-h7a" secondAttribute="height" multiplier="236:83" id="cQn-KA-0ey"/>
@@ -157,16 +157,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.46666666670000001" green="0.75294117650000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zFY-DJ-h7a" firstAttribute="centerX" secondItem="cba-U7-Wjf" secondAttribute="centerX" constant="-8" id="7tb-VI-pEP"/>
+                            <constraint firstItem="zFY-DJ-h7a" firstAttribute="centerX" secondItem="cba-U7-Wjf" secondAttribute="centerX" constant="-0.75" id="7tb-VI-pEP"/>
                             <constraint firstItem="D1Y-jZ-4OA" firstAttribute="leading" secondItem="aeN-AH-Ndo" secondAttribute="trailing" constant="41" id="ALg-CC-qCJ"/>
                             <constraint firstItem="23b-YM-Mq4" firstAttribute="top" secondItem="0YN-wI-Qv3" secondAttribute="bottom" constant="19" id="JNX-fv-GFj"/>
                             <constraint firstItem="gIu-fW-Pph" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JbZ-Eg-5RR"/>
                             <constraint firstItem="YvP-x4-3LD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LX4-us-2d3"/>
-                            <constraint firstItem="0YN-wI-Qv3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="Lpj-gz-OzU"/>
+                            <constraint firstItem="0YN-wI-Qv3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="233" id="Lpj-gz-OzU"/>
                             <constraint firstItem="pNa-np-Oz0" firstAttribute="top" secondItem="aml-ch-u0A" secondAttribute="bottom" constant="7.5" id="MMv-l5-bey"/>
                             <constraint firstItem="cba-U7-Wjf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="MpN-yG-08y"/>
-                            <constraint firstItem="pNa-np-Oz0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="1" id="Q3K-m2-r2k"/>
-                            <constraint firstItem="aml-ch-u0A" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="1" id="QIa-EN-a1O"/>
+                            <constraint firstItem="pNa-np-Oz0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="2" id="Q3K-m2-r2k"/>
+                            <constraint firstItem="aml-ch-u0A" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="2" id="QIa-EN-a1O"/>
                             <constraint firstItem="D1Y-jZ-4OA" firstAttribute="top" secondItem="zFY-DJ-h7a" secondAttribute="bottom" constant="54" id="RBb-Mz-6xs"/>
                             <constraint firstItem="aml-ch-u0A" firstAttribute="top" secondItem="23b-YM-Mq4" secondAttribute="bottom" constant="8" id="YEg-cY-l8q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D1Y-jZ-4OA" secondAttribute="bottom" constant="159" id="Z3T-ch-1Pk"/>
@@ -175,7 +175,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aeN-AH-Ndo" secondAttribute="trailing" symbolic="YES" id="hoL-l0-aLq"/>
                             <constraint firstItem="GH1-W1-DtI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pcZ-t8-lOI"/>
                             <constraint firstItem="cba-U7-Wjf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="pzt-Pl-uW0"/>
-                            <constraint firstItem="zFY-DJ-h7a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="491" id="tKj-tH-djP"/>
+                            <constraint firstItem="zFY-DJ-h7a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="tKj-tH-djP"/>
                             <constraint firstItem="23b-YM-Mq4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uHh-Go-E6A"/>
                             <constraint firstItem="aeN-AH-Ndo" firstAttribute="top" secondItem="zFY-DJ-h7a" secondAttribute="bottom" constant="36" id="xVP-NC-1YH"/>
                             <constraint firstItem="YvP-x4-3LD" firstAttribute="top" secondItem="pNa-np-Oz0" secondAttribute="bottom" constant="17" id="xzh-pZ-B3L"/>
@@ -187,6 +187,7 @@
                             <mask key="subviews">
                                 <exclude reference="vil-Yn-R4E"/>
                                 <exclude reference="E01-f5-6bt"/>
+                                <exclude reference="aeN-AH-Ndo"/>
                                 <exclude reference="D1Y-jZ-4OA"/>
                             </mask>
                         </variation>
